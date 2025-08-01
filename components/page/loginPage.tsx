@@ -22,7 +22,6 @@ import {
 import {
   Separator
 } from "@/components/ui/separator"
-import { ThemeToggle } from "@/components/ui/ThemeToggle"
 import { Eye, EyeOff, Facebook, Github, Twitter } from 'lucide-react'
 
 export default function LoginPage() {
@@ -39,9 +38,6 @@ export default function LoginPage() {
 
   return (
     <main className="flex items-center justify-center min-h-screen bg-muted">
-      {/* <div className="absolute top-4 right-4">
-        <ThemeToggle />
-      </div> */}
 
       <Card className="w-full max-w-sm">
         <CardContent className="p-6 space-y-6">

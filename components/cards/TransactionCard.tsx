@@ -43,7 +43,7 @@ export default function TransactionsCard() {
     <Card>
       <CardHeader className="flex flex-row items-start justify-between space-y-3 p-6">
         <div>
-          <h3 className="text-lg font-medium">Transactions</h3>
+          <h3 className="text-lg font-semibold">Transactions</h3>
           <p className="text-sm text-muted-foreground">
             <span className="text-foreground font-medium">Total 48.5% Growth 😎</span> this month
           </p>
@@ -69,7 +69,7 @@ export default function TransactionsCard() {
               <Icon size={32} />
             </div>
             <div>
-              <p className="text-lg text-muted-foreground">{title}</p>
+              <p className="text-lg font-semibold text-muted-foreground">{title}</p>
               <p className="text-base font-semibold">{stats}</p>
             </div>
           </div>

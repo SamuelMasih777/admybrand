@@ -58,7 +58,7 @@ export default function WeeklyBarChart() {
 
         <div className="flex gap-2">
           <p className="text-2xl font-bold text-primary">45%</p>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-md text-muted-foreground">
             Your user growth is <span className="text-foreground font-medium">45% better</span> than last week 🚀
           </p>
         </div>

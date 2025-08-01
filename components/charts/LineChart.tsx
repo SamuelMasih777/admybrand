@@ -25,9 +25,9 @@ export default function EarningsLineChart() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Weekly Earnings</CardTitle>
+        <CardTitle className="text-lg font-semibold">Weekly Earnings</CardTitle>
       </CardHeader>
-      <CardContent className="h-[300px] p-4">
+      <CardContent className="h-[290px] p-4">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />

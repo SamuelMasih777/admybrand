@@ -25,7 +25,7 @@ const CardStatVertical = (props: any) => {
 
   return (
     <Card className='w-full'>
-      <CardContent className='p-4 flex flex-col gap-2'>
+      <CardContent className='p-4 flex flex-col gap-1'>
         <div className='flex justify-between items-start'>
           <div
             className={cn(
@@ -67,7 +67,7 @@ const CardStatVertical = (props: any) => {
               {`${trend === 'negative' ? '-' : '+'}${trendNumber}`}
             </div>
           </div>
-          <div className='text-sm text-muted-foreground'>{subtitle}</div>
+          <div className='font-medium text-muted-foreground'>{subtitle}</div>
         </div>
       </CardContent>
     </Card>

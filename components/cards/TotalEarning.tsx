@@ -42,7 +42,7 @@ const data: DataType[] = [
     progress: 75,
     title: 'Zipcar',
     amount: '$24,895.65',
-    subtitle: 'React & HTML',
+    subtitle: 'Limited-Time Offers',
     imgSrc: '/images/cards/zipcar.png',
     colorClass: 'bg-purple-500'
   },
@@ -50,7 +50,7 @@ const data: DataType[] = [
     progress: 50,
     title: 'Bitbank',
     amount: '$8,650.20',
-    subtitle: 'Sketch, Figma & XD',
+    subtitle: 'Value-Add Services',
     imgSrc: '/images/cards/bitbank.png',
     colorClass: 'bg-blue-500'
   },
@@ -58,7 +58,7 @@ const data: DataType[] = [
     progress: 20,
     title: 'Aviato',
     amount: '$1,245.80',
-    subtitle: 'HTML & Angular',
+    subtitle: 'Referral Programs',
     imgSrc: '/images/cards/aviato.png',
     colorClass: 'bg-pink-500'
   },
@@ -66,7 +66,7 @@ const data: DataType[] = [
     progress: 50,
     title: 'Venue',
     amount: '$1,678.80',
-    subtitle: 'HTML & Angular',
+    subtitle: 'Done-for-You',
     imgSrc: '/images/cards/aviato.png',
     colorClass: 'bg-red-500'
   }

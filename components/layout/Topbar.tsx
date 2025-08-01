@@ -5,7 +5,12 @@ import AvatarMenu from './AvatarMenu'
 
 export default function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
   return (
-    <div className="h-16 border-b flex items-center justify-between px-6 bg-white dark:bg-zinc-900 sticky top-0 z-10">
+    <div className="h-16 px-6 sticky top-0 z-20 border-b shadow-sm 
+                flex items-center justify-between 
+                bg-gradient-to-r from-purple-50 via-white to-zinc-100 
+                dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 
+                backdrop-blur-md">
+
       <div className="flex items-center gap-4">
         {/* Hamburger visible on mobile */}
         <button onClick={onMenuClick} className="md:hidden">
@@ -24,11 +29,14 @@ export default function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
           />
         </div>
       </div>
-      <div className="flex items-center gap-4">
-        <ThemeToggle />
-        <Bell className="cursor-pointer text-gray-600 dark:text-gray-300" />
-        <AvatarMenu />
-      </div>
+      <div className="flex items-center gap-3">
+  <ThemeToggle />
+  <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-zinc-700 transition">
+    <Bell className="text-gray-600 dark:text-gray-300" />
+  </button>
+  <AvatarMenu />
+</div>
+
     </div>
   )
 }

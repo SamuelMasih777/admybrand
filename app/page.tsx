@@ -8,12 +8,12 @@ import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 export default function Page() {
   const router = useRouter();
-    const isAuthenticated = typeof window !== 'undefined' && localStorage.getItem('auth') === 'true'
+  const isAuthenticated = typeof window !== 'undefined' && localStorage.getItem('auth') === 'true'
 
   useEffect(() => {
     if (isAuthenticated) {
       router.push('/dashboard')
-    }else{
+    } else {
       router.push('/')
     }
   }, [isAuthenticated, router])
@@ -21,10 +21,10 @@ export default function Page() {
   return (
     <main className=" w-full items-center justify-center flex bg-muted overflow-x-hidden">
       <div className="absolute top-4 right-4">
-              <ThemeToggle />
-            </div>
+        <ThemeToggle />
+      </div>
       <div>
-      <LoginPage/>
+        <LoginPage />
       </div>
     </main>
   );

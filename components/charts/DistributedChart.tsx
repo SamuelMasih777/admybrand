@@ -45,7 +45,7 @@ const DistributedBarChart = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <p className="text-center text-sm text-muted-foreground font-medium mt-1">Sessions</p>
+        <p className="text-center text-muted-foreground font-medium">Sessions</p>
       </CardContent>
     </Card>
   )

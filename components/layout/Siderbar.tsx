@@ -67,7 +67,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 min-h-screen fixed bg-white dark:bg-zinc-900 border-r shadow-lg flex flex-col justify-between">
+    <aside className="w-64 min-h-screen fixed bg-gradient-to-b from-purple-100 via-purple-50 to-zinc-50 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-700 border-r shadow-xl flex flex-col justify-between overflow-hidden">
       {/* Top content */}
       <div className="p-5 space-y-6">
         <div className="flex items-center gap-2">
@@ -150,7 +150,7 @@ export default function Sidebar() {
 
       {/* Bottom image */}
       <div className="p-5">
-        <Image src="/images/avatars/imgss.png" alt="Decorative Image" width={1000} height={1000} className="w-full h-32 object-contain" />
+        <Image src="/images/avatars/ADmyBRAND.png" alt="Decorative Image" width={1000} height={1000} className="w-full h-32 object-contain" />
       </div>
     </aside>
   )

@@ -34,20 +34,20 @@ import Image from "next/image"
 import ClientDate from "../clientDate"
 
 const rawData = [
-  { image:americanImage, name: "Zomato", conversions: 127, budget: "$110K", date: new Date("2024-07-01") },
-  { image:americanImage1, name: "Swiggy", conversions: 102, budget: "$89K", date: new Date("2024-07-10") },
-  { image:americanImage8, name: "Meesho", conversions: 88, budget: "$78K", date: new Date("2024-07-15") },
-  { image:americanImage2, name: "Uber", conversions: 66, budget: "$52K", date: new Date("2024-07-22") },
-  { image:americanImage12, name: "Amazon", conversions: 180, budget: "$195K", date: new Date("2024-07-25") },
-  { image:americanImage3, name: "Flipkart", conversions: 142, budget: "$102K", date: new Date("2024-07-28") },
-  { image:americanImage11, name: "Dunzo", conversions: 54, budget: "$39K", date: new Date("2024-07-29") },
-  { image:americanImage4, name: "Zepto", conversions: 77, budget: "$610K", date: new Date("2024-07-30") },
-  { image:americanImage13, name: "Nokia", conversions: 777, budget: "$661K", date: new Date("2024-07-31") },
-  { image:americanImage5, name: "Apple", conversions: 177, budget: "$613K", date: new Date("2024-08-01") },
-  { image:americanImage10, name: "Samsung", conversions: 75, budget: "$614K", date: new Date("2024-07-31") },
-  { image:americanImage6, name: "LinkedIn", conversions: 89, budget: "$161K", date: new Date("2024-07-28") },
-  { image:americanImage9, name: "Lenovo", conversions: 566, budget: "$641K", date: new Date("2024-07-29") },
-  { image:americanImage7, name: "Acer", conversions: 99, budget: "$541K", date: new Date("2024-07-27") },
+  { image:americanImage, name: "Zomato", conversions: 127, budget: "$110K", date: new Date("2025-07-01") },
+  { image:americanImage1, name: "Swiggy", conversions: 102, budget: "$89K", date: new Date("2025-07-10") },
+  { image:americanImage8, name: "Meesho", conversions: 88, budget: "$78K", date: new Date("2025-07-15") },
+  { image:americanImage2, name: "Uber", conversions: 66, budget: "$52K", date: new Date("2025-07-22") },
+  { image:americanImage12, name: "Amazon", conversions: 180, budget: "$195K", date: new Date("2025-07-25") },
+  { image:americanImage3, name: "Flipkart", conversions: 142, budget: "$102K", date: new Date("2025-07-28") },
+  { image:americanImage11, name: "Dunzo", conversions: 54, budget: "$39K", date: new Date("2025-07-29") },
+  { image:americanImage4, name: "Zepto", conversions: 77, budget: "$610K", date: new Date("2025-07-30") },
+  { image:americanImage13, name: "Nokia", conversions: 777, budget: "$661K", date: new Date("2025-07-31") },
+  { image:americanImage5, name: "Apple", conversions: 177, budget: "$613K", date: new Date("2025-08-01") },
+  { image:americanImage10, name: "Samsung", conversions: 75, budget: "$614K", date: new Date("2025-07-31") },
+  { image:americanImage6, name: "LinkedIn", conversions: 89, budget: "$161K", date: new Date("2025-07-28") },
+  { image:americanImage9, name: "Lenovo", conversions: 566, budget: "$641K", date: new Date("2025-07-29") },
+  { image:americanImage7, name: "Acer", conversions: 99, budget: "$541K", date: new Date("2025-07-27") },
 ]
 
 const rowsPerPage = 5
@@ -117,15 +117,6 @@ export default function DataTable() {
     URL.revokeObjectURL(url)
   }
 
-  // const filteredData = rawData
-  //   .filter(row =>
-  //     row.name.toLowerCase().includes(query.toLowerCase())
-  //   )
-  //   .filter(row =>
-  //     !dateRange?.from || !dateRange?.to
-  //       ? true
-  //       : row.date >= dateRange.from && row.date <= dateRange.to
-  //   )
   const handleSort = (key: keyof typeof rawData[0]) => {
     if (sortKey === key) {
       setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
@@ -154,7 +145,7 @@ export default function DataTable() {
             }}
             className="w-[200px]"
           />
-          {/* <DatePickerWithRange date={dateRange} setDate={setDateRange} /> */}
+          <DatePickerWithRange date={dateRange} setDate={setDateRange} />
           <Button variant="outline" onClick={handleClear}>
             <X className="w-4 h-4 mr-2" />
             Clear
