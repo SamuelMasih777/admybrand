@@ -12,9 +12,11 @@ A responsive admin dashboard built using **React**, **MUI**, **ShadCN UI**, and 
 
 ## 📸 Screenshots
 
-![Dashboard Overview](./public/images/ui/dark-ui.png)
-(./public/images/ui/light-ui.png)
-(./public/images/ui/light-ui2.png)
+![Dark UI](./public/images/ui/dark-ui.png)
+
+![Light UI](./public/images/ui/light-ui.png)
+
+![Light UI 2](./public/images/ui/light-ui2.png)
 
 ## ✨ Features
 
