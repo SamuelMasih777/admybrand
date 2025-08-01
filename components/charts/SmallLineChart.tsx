@@ -11,7 +11,6 @@ import {
 } from 'recharts'
 
 import { Card, CardContent } from '@/components/ui/card'
-import { Typography } from '@mui/material'
 
 const data = [
   { name: 'Jan', value: 0 },

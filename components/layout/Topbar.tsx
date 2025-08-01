@@ -1,5 +1,4 @@
 import { Menu, Bell, Search } from 'lucide-react'
-import { useState } from 'react'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import AvatarMenu from './AvatarMenu'
 

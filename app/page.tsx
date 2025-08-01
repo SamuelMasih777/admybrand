@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import LoginPage from "@/components/page/loginPage";
 import { useEffect } from "react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";

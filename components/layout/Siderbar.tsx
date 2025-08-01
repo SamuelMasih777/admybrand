@@ -14,7 +14,6 @@ import { Disclosure } from '@headlessui/react'
 import Logo from "@/public/images/avatars/admybrand_logo.png"
 import Image from 'next/image'
 import NameLogo from "@/public/images/avatars/ADmyBRAND.png"
-import BottomImage from "@/public/images/avatars/imgss.png"
 
 const navItems = [
   {

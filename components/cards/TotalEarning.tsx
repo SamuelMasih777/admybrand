@@ -1,15 +1,6 @@
 'use client'
 
-import { Avatar } from '@mui/material' // Still using MUI Avatar for now
-
-// Recharts Imports
-import {
-  RadialBarChart,
-  RadialBar,
-  PolarAngleAxis,
-  ResponsiveContainer,
-  Tooltip
-} from 'recharts'
+import { Avatar } from '@mui/material'
 
 // ShadCN UI Imports
 import {
