@@ -1,0 +1,109 @@
+'use client'
+
+import Grid from '@mui/material/Grid'
+import { useState } from 'react'
+import Sidebar from '@/components/layout/Siderbar'
+import Topbar from '@/components/layout/Topbar'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import HighlightCard from '@/components/cards/Highlightcard'
+import TransactionsCard from '@/components/cards/TransactionCard'
+import WeeklyBarChart from '@/components/charts/WeeklyBarChart'
+import TrafficPieChart from '@/components/charts/PieChart'
+import EarningsLineChart from '@/components/charts/LineChart'
+import DataTable from '@/components/table/DataTable'
+import TotalEarningChart from '@/components/cards/TotalEarning'
+import ProfitLineChart from '@/components/charts/SmallLineChart'
+import CardStatVertical from '@/components/cards/CardStats'
+import DistributedBarChart from '@/components/charts/DistributedChart'
+import Drawer from '@mui/material/Drawer'
+import dataImage from "@/public/images/logos/citi-bank.png"
+import dataImage2 from "@/public/images/logos/american-bank.png"
+import Footer from '@/components/layout/Footer'
+
+export default function DashboardPage() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const isMobile = useMediaQuery('(max-width: 1024px)') // Tailwind's lg breakpoint
+
+  const handleDrawerToggle = () => setMobileOpen(!mobileOpen)
+  return (
+    <div className="flex">
+      {/* Desktop Sidebar */}
+      {!isMobile && <Sidebar />}
+
+      {/* Mobile Sidebar Drawer */}
+      {isMobile && (
+        <Drawer
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{ keepMounted: true }}
+          sx={{ '& .MuiDrawer-paper': { width: 256 } }} // same as ml-64
+        >
+          <Sidebar />
+        </Drawer>
+      )}
+      <div className={`flex-1 ${mobileOpen ? 'ml-0' : 'md:ml-64'} transition-all duration-300`}>
+        <Topbar onMenuClick={() => setMobileOpen(!mobileOpen)} />
+        <main className="p-4">
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={4}>
+              <HighlightCard />
+            </Grid>
+            <Grid item xs={12} md={8} lg={8}>
+              <TransactionsCard />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <WeeklyBarChart />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <TotalEarningChart />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <Grid container spacing={6}>
+                <Grid item xs={12} sm={6}>
+                  <ProfitLineChart />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <CardStatVertical
+                    title='Total Profit'
+                    stats='$225.6k'
+                    avatarIcon={dataImage.src}
+                    avatarColor='secondary'
+                    subtitle='Weekly Profit'
+                    trendNumber='42%'
+                    trend='positive'
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <CardStatVertical
+                    stats='$125.6k'
+                    trend='positive'
+                    trendNumber='18%'
+                    title='New Project'
+                    subtitle='Yearly Project'
+                    avatarColor='primary'
+                    avatarIcon={dataImage2.src}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <DistributedBarChart />
+                </Grid>
+              </Grid>
+            </Grid>
+            {/* Optional Chart Section */}
+            <Grid item xs={12} md={6} lg={4}>
+              <TrafficPieChart />
+            </Grid>            
+            <Grid item xs={12} md={4} lg={8}>
+              <EarningsLineChart />
+            </Grid>
+            <Grid item xs={12}>
+                <DataTable />      
+            </Grid>
+          </Grid>
+          <Footer/>
+        </main>
+      </div>
+    </div>
+  )
+}
